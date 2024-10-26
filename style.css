@@ -1,0 +1,110 @@
+/* Base styling */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #1a1f2b, #121419);
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+/* Stopwatch display container */
+
+.stopwatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2a2f3e;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.timerDisplay {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Button styling */
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    transition: color 0.3s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    opacity: 0.15;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover::before {
+    opacity: 0.3;
+}
+
+#stopBtn {
+    border: 2px solid red;
+}
+
+#startBtn {
+    border: 2px solid brown;
+}
+
+#resetBtn {
+    border: 2px solid blue;
+}
+
+#stopBtn:hover {
+    color: red;
+}
+
+#startBtn:hover {
+    color: brown;
+}
+
+#resetBtn:hover {
+    color: blue;
+}
+
+
+/* Glow effect on hover */
+
+.btn:hover {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
